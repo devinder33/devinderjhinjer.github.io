@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Devinder Singh Jhinjer portrait placeholder</title>
+  <desc id="desc">A polished typographic placeholder sized for a four-by-five professional portrait.</desc>
+  <rect width="800" height="1000" fill="#18242c"/>
+  <path d="M0 0h800v215L0 505z" fill="#4055e8"/>
+  <path d="M800 1000H0V785l800-290z" fill="#101920"/>
+  <circle cx="630" cy="175" r="215" fill="none" stroke="#d9ff58" stroke-width="2" opacity=".6"/>
+  <circle cx="630" cy="175" r="160" fill="none" stroke="#d9ff58" stroke-width="2" opacity=".28"/>
+  <g transform="translate(72 690)">
+    <text fill="#d9ff58" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="5">PORTRAIT PLACEHOLDER</text>
+    <text y="96" fill="#ffffff" font-family="Georgia, serif" font-size="128" font-style="italic">DSJ</text>
+    <rect y="135" width="656" height="1" fill="#71808a"/>
+    <text y="180" fill="#a9b6bd" font-family="Arial, sans-serif" font-size="21" letter-spacing="3">REPLACE WITH 4:5 JPG OR WEBP</text>
+  </g>
+  <path d="M35 35h62M35 35v62M765 35h-62M765 35v62M35 965h62M35 965v-62M765 965h-62M765 965v-62" fill="none" stroke="#ffffff" stroke-width="2" opacity=".45"/>
+</svg>
