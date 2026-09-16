@@ -2,7 +2,7 @@
 const profileLinks = {
   email: "",
   linkedin: "",
-  github: "",
+  github: "https://github.com/devinder33",
   upwork: "",
   resume: ""
 };
