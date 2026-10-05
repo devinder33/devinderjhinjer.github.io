@@ -176,7 +176,16 @@
             </article>
 
             <article class="project reveal">
-              <div class="project-image"><span class="project-index">03</span><img src="assets/images/projects/eazy-customer-placeholder.svg" alt="Placeholder for an Eazy Customer app screenshot" width="720" height="500" loading="lazy"></div>
+              <div class="project-image project-carousel" role="region" aria-label="Eazy Customer screenshots" aria-roledescription="carousel" data-carousel>
+                <span class="project-index">03</span>
+                <div class="carousel-track" data-carousel-track tabindex="0" aria-label="Screenshots; swipe or use arrow keys">
+                  <img src="assets/images/projects/eazy-customer-home.jpg" alt="Eazy Customer home screen with shopping and service categories" width="600" height="1300" loading="lazy">
+                  <img src="assets/images/projects/eazy-customer-healthcare.jpg" alt="Eazy Customer doctor and healthcare booking screen" width="600" height="1300" loading="lazy">
+                </div>
+                <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous Eazy Customer screenshot" data-carousel-prev>←</button>
+                <button class="carousel-arrow carousel-next" type="button" aria-label="Next Eazy Customer screenshot" data-carousel-next>→</button>
+                <span class="carousel-count" data-carousel-count aria-live="polite" aria-atomic="true">1 / 2</span>
+              </div>
               <div class="project-copy"><p class="project-meta">Large codebase · Multi-team</p><h3>Eazy Customer</h3><p class="project-lead">A large production customer app supporting bookings with service providers and doctors, realtime status updates, location tracking, communication, and payments.</p><div class="contribution"><span>My contribution</span><p>Feature development and maintenance across booking flows, realtime service status, live location tracking, customer/provider communication, video calling, and payments in a large codebase worked on by multiple development teams.</p></div><p class="project-tech">Kotlin · MQTT · Maps · WebRTC · Stripe</p></div>
             </article>
 
