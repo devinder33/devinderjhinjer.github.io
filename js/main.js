@@ -1,10 +1,10 @@
-// Add real URLs here. Empty values are shown as intentionally disabled placeholders.
+// Public contact, professional profiles, and downloadable résumé.
 const profileLinks = {
-  email: "",
-  linkedin: "",
+  email: "devindersinghjhinjer@gmail.com",
+  linkedin: "https://www.linkedin.com/in/devinder-singh-jhinjer",
   github: "https://github.com/devinder33",
-  upwork: "",
-  resume: ""
+  upwork: "https://www.upwork.com/freelancers/~018b08f166a1a92beb?mp_source=share",
+  resume: "resume/Devinder-Singh-Jhinjer-Resume.pdf"
 };
 
 document.querySelectorAll("[data-profile]").forEach((link) => {
