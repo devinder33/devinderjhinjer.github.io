@@ -107,8 +107,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-image { position: relative; overflow: hidden; background: var(--night); }
 .project-image img { width: 100%; transition: transform .55s ease; }
 .project:hover .project-image img { transform: scale(1.018); }
-.project-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: 12px; }
-.project-gallery img { height: 100%; aspect-ratio: 6 / 13; object-fit: cover; }
+.project-carousel { aspect-ratio: 720 / 500; }
+.carousel-track { display: flex; width: 100%; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.carousel-track::-webkit-scrollbar { display: none; }
+.project-carousel .carousel-track img { flex: 0 0 100%; width: 100%; min-width: 0; height: 100%; object-fit: contain; scroll-snap-align: start; scroll-snap-stop: always; }
+.project:hover .project-carousel img { transform: none; }
+.carousel-arrow { position: absolute; z-index: 3; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); color: var(--ink); font-size: 1.3rem; cursor: pointer; }
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }
+.carousel-count { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); padding: 3px 10px; border-radius: 20px; background: var(--night); color: var(--white); font-size: .73rem; }
 .project-index { position: absolute; z-index: 2; top: 15px; right: 17px; display: grid; place-items: center; width: 42px; height: 42px; background: var(--acid); border-radius: 50%; font-family: var(--serif); font-size: .8rem; font-style: italic; }
 .project-meta { margin: 0 0 13px; color: var(--blue); font-size: .68rem; font-weight: 820; letter-spacing: .1em; text-transform: uppercase; }
 .project h3 { margin: 0; font-size: clamp(2.8rem, 5vw, 5rem); line-height: .95; letter-spacing: -.065em; }

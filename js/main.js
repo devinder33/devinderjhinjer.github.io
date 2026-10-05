@@ -64,3 +64,28 @@ if (reducedMotion || !("IntersectionObserver" in window)) {
 }
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  const track = carousel.querySelector("[data-carousel-track]");
+  const count = carousel.querySelector("[data-carousel-count]");
+  const total = track.querySelectorAll("img").length;
+  let index = 0;
+  const goTo = (next) => {
+    index = (next + total) % total;
+    track.scrollTo({ left: index * track.clientWidth, behavior: reducedMotion ? "instant" : "smooth" });
+  };
+  carousel.querySelector("[data-carousel-prev]").addEventListener("click", () => goTo(index - 1));
+  carousel.querySelector("[data-carousel-next]").addEventListener("click", () => goTo(index + 1));
+  track.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+    event.preventDefault();
+    goTo(index + (event.key === "ArrowRight" ? 1 : -1));
+  });
+  track.addEventListener("scroll", () => {
+    index = Math.round(track.scrollLeft / track.clientWidth);
+    count.textContent = `${index + 1} / ${total}`;
+  }, { passive: true });
+  new ResizeObserver(() => {
+    track.scrollTo({ left: index * track.clientWidth, behavior: "instant" });
+  }).observe(track);
+});
